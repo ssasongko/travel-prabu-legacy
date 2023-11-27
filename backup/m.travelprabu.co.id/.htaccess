@@ -1,0 +1,8 @@
+RewriteEngine on
+
+# Tambahkan ini untuk mengabaikan file dan direktori yang ada
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redirect hanya permintaan ke proyek Flutter
+RewriteRule ^(.*)$ index.html [L]
